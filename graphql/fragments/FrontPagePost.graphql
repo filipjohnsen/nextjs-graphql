@@ -1,0 +1,5 @@
+fragment FrontPagePost on Post {
+  title
+  slug
+  excerpt
+}
