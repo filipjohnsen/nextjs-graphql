@@ -1,0 +1,26 @@
+fragment TagSEO on TaxonomySEO {
+  title
+  canonical
+  focuskw
+  metaDesc
+  metaKeywords
+  metaRobotsNofollow
+  metaRobotsNoindex
+  opengraphAuthor
+  opengraphDescription
+  opengraphImage {
+    altText
+  }
+  opengraphModifiedTime
+  opengraphPublishedTime
+  opengraphPublisher
+  opengraphTitle
+  twitterDescription
+  twitterTitle
+  schema {
+    raw
+  }
+  twitterImage {
+    sourceUrl
+  }
+}

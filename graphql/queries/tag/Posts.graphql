@@ -1,0 +1,13 @@
+query TagPosts($tag: ID!, $first: Int!) {
+  tag(id: $tag, idType: SLUG) {
+    name
+    seo {
+      ...TagSEO
+    }
+    posts(first: $first) {
+      nodes {
+        ...PostPreview
+      }
+    }
+  }
+}

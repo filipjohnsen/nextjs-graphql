@@ -1,0 +1,11 @@
+fragment Post on Post {
+  slug
+  title
+  content
+  seo {
+    ...PostSEO
+  }
+  featuredImage {
+    ...FeaturedImage
+  }
+}

@@ -1,0 +1,8 @@
+fragment PostPreview on Post {
+  slug
+  title
+  excerpt(format: RENDERED)
+  featuredImage {
+    ...FeaturedImage
+  }
+}

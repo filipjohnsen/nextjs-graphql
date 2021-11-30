@@ -1,11 +1,5 @@
 import Post from '@components/Post';
-import {
-  PostsDocument,
-  PostsQuery,
-  PostsQueryVariables,
-  usePostSeoQuery,
-  usePostsQuery,
-} from '@generated/graphql';
+import { PostsDocument, PostsQuery, PostsQueryVariables } from '@generated/graphql';
 import { client } from '@lib/graphql';
 import type { GetStaticProps, NextPage } from 'next';
 
@@ -14,14 +8,10 @@ interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = ({ data }) => {
-  const { data: seodata, loading } = usePostSeoQuery();
-
-  if (loading) return <div>Loading...</div>;
-
   return (
     <div>
       {data?.posts?.nodes?.map((post) => (
-        <Post post={post} />
+        <Post key={post?.slug} post={post} />
       ))}
     </div>
   );

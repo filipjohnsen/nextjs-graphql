@@ -1,0 +1,7 @@
+query CategorySlugs($first: Int!) {
+  categories(first: $first, where: { hideEmpty: true }) {
+    nodes {
+      slug
+    }
+  }
+}

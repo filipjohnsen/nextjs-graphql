@@ -1,7 +1,7 @@
 query Posts($first: Int!) {
   posts(first: $first) {
     nodes {
-      ...FrontPagePost
+      ...PostPreview
     }
   }
 }

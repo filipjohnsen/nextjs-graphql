@@ -1,0 +1,7 @@
+query PostSlugs($first: Int!) {
+  posts(first: $first, where: { status: PUBLISH }) {
+    nodes {
+      slug
+    }
+  }
+}

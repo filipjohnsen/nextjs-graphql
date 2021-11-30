@@ -1,0 +1,12 @@
+query CategoryPosts($category: ID!, $first: Int!) {
+  category(id: $category, idType: SLUG) {
+    seo {
+      ...CategorySEO
+    }
+    posts(first: $first) {
+      nodes {
+        ...PostPreview
+      }
+    }
+  }
+}

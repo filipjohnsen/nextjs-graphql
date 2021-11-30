@@ -1,0 +1,11 @@
+fragment FeaturedImage on NodeWithFeaturedImageToMediaItemConnectionEdge {
+  node {
+    sourceUrl
+    mediaDetails {
+      width
+      height
+    }
+    altText
+    caption
+  }
+}

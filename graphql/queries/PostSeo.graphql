@@ -1,9 +1,0 @@
-query PostSeo {
-  posts {
-    nodes {
-      seo {
-        title
-      }
-    }
-  }
-}
